@@ -1,5 +1,5 @@
 package storage;
 
 public enum FileExtension {
-    EXE, DOCS, TXT, JPG
+    EXE, TXT, JPG, BIN, PDF, DOC, DOCX, ZIP, PNG
 }

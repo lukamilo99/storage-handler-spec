@@ -39,4 +39,12 @@ public class Configuration {
     public void takeFromNumberOfFile(Path path){
         numberOfFilesInDirectoryMap.put(path, numberOfFilesInDirectoryMap.get(path) - 1);
     }
+
+    public void addToRemainingSize(long sizeOfFile){
+        remainingStorageSize += sizeOfFile;
+    }
+
+    public void addToNumberOfFile(Path path){
+        numberOfFilesInDirectoryMap.put(path, numberOfFilesInDirectoryMap.get(path) + 1);
+    }
 }
