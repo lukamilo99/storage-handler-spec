@@ -1,18 +1,19 @@
-package storage;
+package storage.storageComponents;
 
 import lombok.Getter;
+import lombok.Setter;
 
-import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 @Getter
+@Setter
 public class Configuration {
     private long storageSize;
     private long remainingStorageSize;
     private Map<FileExtension, Boolean> allowedExtensionMap;
-    private Map<Path, Integer> numberOfFilesInDirectoryMap;
+    private Map<String, Integer> numberOfFilesInDirectoryMap;
 
     public Configuration(){
         this.storageSize = Long.MAX_VALUE;
@@ -27,6 +28,7 @@ public class Configuration {
         this.remainingStorageSize = storageSize;
         this.numberOfFilesInDirectoryMap = new HashMap<>();
         this.allowedExtensionMap = new HashMap<>();
+
         for(String extension: unwantedExtensions) {
             allowedExtensionMap.put(FileExtension.valueOf(extension), false);
         }
@@ -36,7 +38,7 @@ public class Configuration {
         remainingStorageSize -= sizeOfFile;
     }
 
-    public void takeFromNumberOfFile(Path path){
+    public void takeFromNumberOfFile(String path){
         numberOfFilesInDirectoryMap.put(path, numberOfFilesInDirectoryMap.get(path) - 1);
     }
 
@@ -44,7 +46,7 @@ public class Configuration {
         remainingStorageSize += sizeOfFile;
     }
 
-    public void addToNumberOfFile(Path path){
+    public void addToNumberOfFile(String path){
         numberOfFilesInDirectoryMap.put(path, numberOfFilesInDirectoryMap.get(path) + 1);
     }
 }
