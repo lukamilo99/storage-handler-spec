@@ -25,5 +25,9 @@ public abstract class AbstractStorage implements Storage{
     public void setFilter(StorageFilter filter){
         this.filter = filter;
     }
+
+    public void setUtilsForChecker(StorageUtils storageUtils){
+        this.checker.setStorageUtils(storageUtils);
+    }
     protected abstract void createJSONConfigurationFile(String path);
 }
