@@ -1,7 +1,6 @@
-package storage.storageComponents;
+package storage.components;
 
 public abstract class StorageUtils {
-
     public abstract long getSizeOf(String file);
 
     public static FileExtension getFileExtension(String file){

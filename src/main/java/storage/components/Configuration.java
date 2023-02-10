@@ -1,4 +1,4 @@
-package storage.storageComponents;
+package storage.components;
 
 import lombok.Getter;
 import lombok.Setter;

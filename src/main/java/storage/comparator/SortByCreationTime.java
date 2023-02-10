@@ -1,4 +1,4 @@
-package storage.storageComparator;
+package storage.comparator;
 
 import java.util.Comparator;
 
