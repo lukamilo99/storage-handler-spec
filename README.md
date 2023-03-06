@@ -6,7 +6,7 @@ The library provides specification of an API for managing files. It allows you t
 
 ## Motivation
 
-This project is a part of a university assignment, which involves developing a library, implementing it, and creating a console application to work with the implementation.
+This project is a part of a university assignment, which involves developing a library specification, implementing it, and creating a console application to work with the implementation.
 
 ## Installation
 ```
